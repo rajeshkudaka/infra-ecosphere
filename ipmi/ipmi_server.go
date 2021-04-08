@@ -25,7 +25,7 @@ func DeserializeAndExecute(buf io.Reader, addr *net.UDPAddr, server *net.UDPConn
 }
 
 func IPMIServerHandler(BMCIP string) {
-	addr := fmt.Sprintf("%s:623", BMCIP)
+	addr := fmt.Sprintf("%s:6223", BMCIP)
 	serverAddr, err := net.ResolveUDPAddr("udp", addr)
 	utils.CheckError(err)
 
